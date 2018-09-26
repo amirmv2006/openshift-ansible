@@ -17,11 +17,11 @@ openshift_node_groups=[{'name': 'node-config-all-in-one', 'labels': ['node-role.
 
 
 [masters]
-localhost ansible_connection=local
+centos.vm ansible_connection=local
 
 [etcd]
-localhost ansible_connection=local
+centos.vm ansible_connection=local
 
 [nodes]
 # openshift_node_group_name should refer to a dictionary with matching key of name in list openshift_node_groups.
-localhost ansible_connection=local openshift_node_group_name="node-config-all-in-one"
+centos.vm ansible_connection=local openshift_node_group_name="node-config-all-in-one"
